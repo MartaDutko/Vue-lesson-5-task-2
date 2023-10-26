@@ -1,16 +1,20 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <product-card-list :card-list-data="raspberryList"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ProductCardList from './components/ProductCardList.vue';
+import { raspberryList } from "./constants/2_data_raspberry";
 
 export default {
+
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  components: { ProductCardList },
+  data() {
+    return {
+      raspberryList
+    }
+  },
 }
 </script>
 
